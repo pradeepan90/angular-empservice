@@ -1,0 +1,15 @@
+<div *ngIf="selectedEmp">
+  <h2>{{selectedEmp.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{selectedEmp.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="selectedEmp.name" placeholder="name"/>
+    </label>
+        <label>age:{{selectedEmp.age}}</label>
+  </div>
+
+  <button (click)="goBack()">go back</button>
+  <button (click)="save()">save</button>
+  <button (click)="goNext()">Next Employee</button>
+  <button (click)="goPrev()">Prev Employee</button>
+</div>
